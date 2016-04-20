@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	fmt.Println("Test case V1")
+	fmt.Println("Test case V2")
 }
