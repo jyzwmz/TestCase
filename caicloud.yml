@@ -1,0 +1,9 @@
+integration:
+  image: ubuntu:latest
+  commands:
+    - cd /
+	- echo "integration"
+postbuild:
+  image: ubuntu:latest
+  commands:
+    - echo "postbuild"
