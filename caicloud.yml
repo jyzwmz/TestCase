@@ -2,7 +2,7 @@ integration:
   image: ubuntu:latest
   commands:
     - cd /
-	- echo "integration"
+    - echo "integration"
 postbuild:
   image: ubuntu:latest
   commands:
