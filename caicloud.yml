@@ -1,9 +1,9 @@
 integration:
-  image: ubuntu:latest
+  image: localhost:5000/admin/ubuntu:latest
   commands:
     - cd /
     - echo "integration"
 postbuild:
-  image: ubuntu:latest
+  image: localhost:5000/admin/ubuntu:latest
   commands:
     - echo "postbuild"
