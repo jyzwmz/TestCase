@@ -9,7 +9,7 @@ prebuild:
     - echo "prebuild"
     - cd /go/src
     - git clone https://github.com/superxi911/TestCase.git
-    - cd /go/scr/TestCase
+    - cd /go/src/TestCase
     - go build -race .
     - cp /go/src/TestCase/TestCase /root/TestCase
 postbuild:
