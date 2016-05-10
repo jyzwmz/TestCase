@@ -1,13 +1,18 @@
 integration:
-  image: localhost:5000/admin/ubuntu:latest
+  image: localhost:5000/admin/golang:latest
   commands:
     - cd /
     - echo "integration"
 prebuild:
-  image: localhost:5000/admin/ubuntu:latest
+  image: localhost:5000/admin/golang:latest
   commands:
     - echo "prebuild"
+    - cd /go/src
+    - git clone https://github.com/superxi911/TestCase.git
+    - cd /go/scr/TestCase
+    - go build -race .
+	- cp /go/src/TestCase/TestCase /root/TestCase
 postbuild:
-  image: localhost:5000/admin/ubuntu:latest
+  image: localhost:5000/admin/golang:latest
   commands:
     - echo "postbuild"
