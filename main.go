@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println("Test case V6")
+	fmt.Println("Test case V7")
 }

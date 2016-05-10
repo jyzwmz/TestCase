@@ -3,10 +3,6 @@ integration:
   commands:
     - cd /
     - echo "integration"
-prebuild:
-  image: localhost:5000/admin/ubuntu:latest
-  commands:
-    - echo "prebuild"
 postbuild:
   image: localhost:5000/admin/ubuntu:latest
   commands:
