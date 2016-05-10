@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
+	"log"
 )
 
 func main() {
-	fmt.Println("Test case V5")
+	fmt.Println("Test case V6")
 }
