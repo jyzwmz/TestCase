@@ -16,7 +16,7 @@ pre_build:
     - go build -race .
     - cp /go/src/TestCase/TestCase /root
   outputs:
-    - /root/TestCase
+    - /root
 
 postbuild:
   image: localhost:5000/admin/golang:latest
