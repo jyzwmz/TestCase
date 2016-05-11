@@ -3,15 +3,21 @@ integration:
   commands:
     - cd /
     - echo "integration"
-prebuild:
+
+pre_build:
   image: localhost:5000/admin/golang:latest
+  environment:
+    - STEP_NAME=prebuild
   commands:
-    - echo "prebuild"
+    - echo $STEP_NAME
     - cd /go/src
     - git clone https://github.com/superxi911/TestCase.git
     - cd /go/src/TestCase
     - go build -race .
-    - cp /go/src/TestCase/TestCase /root/TestCase
+    - cp /go/src/TestCase/TestCase /root
+  output:
+    - /root
+
 postbuild:
   image: localhost:5000/admin/golang:latest
   commands:
