@@ -15,7 +15,7 @@ pre_build:
     - cd /go/src/TestCase
     - go build -race .
     - cp /go/src/TestCase/TestCase /root
-  output:
+  outputs:
     - /root
 
 postbuild:
