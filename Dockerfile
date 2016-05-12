@@ -1,4 +1,4 @@
-FROM localhost:5000/admin/golang:latest
+FROM golang:latest
 
 # Set the default timezone to Shanghai
 RUN echo "Asia/Shanghai" > /etc/timezone
