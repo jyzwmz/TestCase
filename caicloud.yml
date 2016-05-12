@@ -5,6 +5,7 @@ integration:
     - echo "integration"
 
 pre_build:
+  dockerfile_path: .
   image: localhost:5000/admin/golang:latest
   environment:
     - STEP_NAME=prebuild
