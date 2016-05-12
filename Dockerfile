@@ -7,6 +7,6 @@ RUN dpkg-reconfigure -f noninteractive tzdata
 # Build Testcase
 WORKDIR /root
 COPY . /root
-RUN go build -race TestCase
+RUN go build -race -o TestCase
 
 CMD ["/root/TestCase"]
