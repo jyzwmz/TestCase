@@ -7,6 +7,8 @@ integration:
 pre_build:
 #  context_dir: .
   dockerfile_name: Dockerfile_prebuild
+  outputs:
+    - /root/TestCase
 
 build:
   dockerfile_name: Dockerfile_publish
