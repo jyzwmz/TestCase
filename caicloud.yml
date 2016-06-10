@@ -1,12 +1,12 @@
 integration:
-  image: localhost:5000/admin/golang:latest
+  image: localhost:5000/admin/golang:1.5.3
   commands:
     - cd /
     - echo "integration"
 
 pre_build:
   dockerfile_path: .
-  image: localhost:5000/admin/golang:latest
+  image: localhost:5000/admin/golang:1.5.3
   environment:
     - STEP_NAME=prebuild
   commands:
