@@ -23,8 +23,6 @@ pre_build:
 build:
   dockerfile_name: Dockerfile_publish
   image: localhost:5000/admin/golang:1.5.3
-  commands:
-    - echo "build"
 
 postbuild:
   image: localhost:5000/admin/golang:1.5.3
