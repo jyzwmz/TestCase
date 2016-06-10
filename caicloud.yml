@@ -1,12 +1,14 @@
 integration:
+  dockerfile_path: integration
+  dockerfile_name: Dockerfile_i
   image: localhost:5000/admin/golang:1.5.3
   commands:
     - cd /
     - echo "integration"
 
 pre_build:
-  dockerfile_path: .
-  dockerfile_name: Dockerfile_prebuild
+  dockerfile_path: integration
+  dockerfile_name: Dockerfile_i
   image: localhost:5000/admin/golang:1.5.3
   environment:
     - STEP_NAME=prebuild
