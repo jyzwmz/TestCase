@@ -21,8 +21,9 @@ pre_build:
     - /root/TestCase
 
 build:
-#  context_dir: .
-  dockerfile_name: Dockerfile_publish
+  image: localhost:5000/admin/golang:latest
+  commands:
+    - echo "build"
 
 postbuild:
   image: localhost:5000/admin/golang:latest
