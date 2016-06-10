@@ -1,5 +1,5 @@
 integration:
-  image: busybox:latest
+  image: localhost:5000/admin/golang:latest
   commands:
     - cd /
     - echo "integration"
