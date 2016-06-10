@@ -5,7 +5,7 @@ integration:
     - echo "integration"
 
 pre_build:
-  context_dir: .
+#  context_dir: .
   dockerfile_name: Dockerfile_prebuild
   image: localhost:5000/admin/golang:1.5.3
   environment:
@@ -21,7 +21,7 @@ pre_build:
     - /root/TestCase
 
 build:
-  context_dir: .
+#  context_dir: .
   dockerfile_name: Dockerfile_publish
 
 postbuild:
