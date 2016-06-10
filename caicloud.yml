@@ -7,22 +7,10 @@ integration:
 pre_build:
 #  context_dir: .
   dockerfile_name: Dockerfile_prebuild
-  image: localhost:5000/admin/golang:1.5.3
-  environment:
-    - STEP_NAME=prebuild
-  commands:
-    - echo $STEP_NAME
-    - cd /go/src
-    - git clone https://github.com/superxi911/TestCase.git
-    - cd /go/src/TestCase
-    - go build -race .
-    - cp /go/src/TestCase/TestCase /root
-  outputs:
-    - /root/TestCase
 
 build:
   dockerfile_name: Dockerfile_publish
-#  image: localhost:5000/admin/golang:1.5.3
+  image: localhost:5000/admin/golang:1.5.3
 
 postbuild:
   image: localhost:5000/admin/golang:1.5.3
