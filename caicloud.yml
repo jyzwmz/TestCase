@@ -5,7 +5,7 @@ integration:
     - echo "integration"
 
 pre_build:
-  dockerfile_name: Dockerfile_prebuild
+  context_dir: prebuild
   image: localhost:5000/admin/golang:1.5.3
   commands:
     - echo $STEP_NAME
