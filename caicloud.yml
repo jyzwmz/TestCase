@@ -5,9 +5,8 @@ integration:
     - echo "integration"
 
 pre_build:
-#  context_dir: .
   dockerfile_name: Dockerfile_prebuild
-  #image: localhost:5000/admin/golang:1.5.3
+  image: localhost:5000/admin/golang:1.5.3
   commands:
     - echo $STEP_NAME
     - cd /go/src
@@ -22,7 +21,6 @@ pre_build:
 
 build:
   dockerfile_name: Dockerfile_publish
-  image: localhost:5000/admin/golang:1.5.3
 
 postbuild:
   image: localhost:5000/admin/golang:1.5.3
