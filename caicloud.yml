@@ -20,7 +20,7 @@ pre_build:
     - /root/TestCase
 
 build:
-#  dockerfile_name: Dockerfile_publish
+  context_dir: .
 
 postbuild:
   image: localhost:5000/admin/golang:1.5.3
