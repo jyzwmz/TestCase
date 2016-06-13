@@ -1,0 +1,18 @@
+integration:
+  image: golang:latest
+  commands:
+    - cd /
+    - echo "integration"
+
+pre_build:
+  context_dir: prebuild
+  outputs:
+    - /root/TestCase
+
+build:
+  dockerfile_name: Dockerfile_publish
+
+postbuild:
+  image: golang:latest
+  commands:
+    - echo "postbuild"
