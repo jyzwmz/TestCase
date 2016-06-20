@@ -16,3 +16,4 @@ postbuild:
   image: golang:latest
   commands:
     - echo "postbuild"
+
