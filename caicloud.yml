@@ -2,7 +2,7 @@ integration:
   image: golang:latest
   commands:
     - cd /
-    - echo "integration test commit webhook 123"
+    - echo "integration test pull request webhook"
 
 pre_build:
   context_dir: prebuild
